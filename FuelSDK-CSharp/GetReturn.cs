@@ -39,6 +39,7 @@ namespace FuelSDK
             var response = ExecuteAPI(x =>
             {
                 var rr = new RetrieveRequest();
+                rr.QueryAllAccounts = true;
 
                 // Handle RetrieveAllSinceLastBatch
                 if (x.GetType().GetProperty("GetSinceLastBatch") != null)
